@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Nexora Acoustic"
+description = "A refined responsive website for Nexora Acoustic Engineering Services, presenting its acoustic consultancy, sectors, approach, and project enquiry experience."
+version = "1.0.0"
+id = "artifacts/nexora-acoustic"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18543
+
+[services.development]
+run = "pnpm --filter @workspace/nexora-acoustic run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nexora-acoustic", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nexora-acoustic/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18543"
+BASE_PATH = "/"

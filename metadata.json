@@ -1,0 +1,8 @@
+{
+  "name": "Remix Nexora-Acoustic-Website",
+  "description": "Imported from GitHub: diyaj14/Nexora-Acoustic-Website",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

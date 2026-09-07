@@ -1,0 +1,26 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@workspace/nexora-acoustic",
+    "build": "npm run build --workspace=@workspace/nexora-acoustic",
+    "typecheck": "tsc --build",
+    "lint": "tsc --build"
+  },
+  "dependencies": {
+    "@replit/connectors-sdk": "^0.4.1",
+    "gsap": "^3.15.0",
+    "motion": "^13.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "typescript": "~5.9.3"
+  }
+}
